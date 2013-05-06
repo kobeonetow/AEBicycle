@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BatteryMainActivity" >
+    
+    <Button
+        android:id="@+id/buttonTemp"
+        android:layout_width="55dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:text="温度计" />
+
+	
+    <com.aeenery.aebicycle.battery.widget.Tachometer
+        android:id="@+id/tachometer"
+        android:layout_width="225dp"
+        android:layout_height="149dp"
+        android:layout_toRightOf="@+id/buttonTemp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        />
+    <TextView 
+        android:id="@+id/bpowernow"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/buttonTemp"
+        android:layout_below="@+id/tachometer"
+        android:gravity="center"
+        android:text="电量:N.A."/>
+    <TextView
+        android:id="@+id/currentnow"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/buttonTemp"
+        android:layout_below="@+id/bpowernow"
+        android:gravity="center"
+        android:text="电流:N.A."/>
+    <TextView
+        android:id="@+id/voltagenow"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/buttonTemp"
+        android:layout_below="@+id/currentnow"
+        android:gravity="center"
+        android:text="电压:N.A."/>
+</RelativeLayout>

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/bike/!svn/ver/116/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms
+END
+PacketAnalyzer.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/bike/!svn/ver/99/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/PacketAnalyzer.java
+END
+ConfigController.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/bike/!svn/ver/104/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/ConfigController.java
+END
+BMSMessageHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/bike/!svn/ver/95/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/BMSMessageHandler.java
+END
+RequestController.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/bike/!svn/ver/115/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/RequestController.java
+END
+TimeOutThread.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/bike/!svn/ver/106/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/TimeOutThread.java
+END
+BMSUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/bike/!svn/ver/117/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/BMSUtil.java
+END
+SendPacketThread.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/bike/!svn/ver/115/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/SendPacketThread.java
+END
+SenderContext.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/bike/!svn/ver/115/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/SenderContext.java
+END
+BMSReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/bike/!svn/ver/98/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/BMSReceiver.java
+END
+BMSController.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/bike/!svn/ver/117/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/BMSController.java
+END
+PacketBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/bike/!svn/ver/115/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/PacketBuilder.java
+END
+AvailabilityNotificationCheck.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/bike/!svn/ver/117/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/AvailabilityNotificationCheck.java
+END
+SystemErrorHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/bike/!svn/ver/95/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/SystemErrorHandler.java
+END

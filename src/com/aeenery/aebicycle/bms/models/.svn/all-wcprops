@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/bike/!svn/ver/115/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models
+END
+BMSPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/bike/!svn/ver/106/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BMSPacket.java
+END
+BatteryPeriodicPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/bike/!svn/ver/109/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BatteryPeriodicPacket.java
+END
+BatteryVoltageCurrentPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/bike/!svn/ver/109/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BatteryVoltageCurrentPacket.java
+END
+BMSRequestPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/bike/!svn/ver/105/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BMSRequestPacket.java
+END
+BatteryChipInfoPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/bike/!svn/ver/108/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BatteryChipInfoPacket.java
+END
+BatteryChipPackageTypePacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/bike/!svn/ver/108/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BatteryChipPackageTypePacket.java
+END
+BatteryTemperaturePacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/bike/!svn/ver/108/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BatteryTemperaturePacket.java
+END
+BatteryChipVoltagePacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/bike/!svn/ver/109/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BatteryChipVoltagePacket.java
+END
+ConfigurationInfoPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/bike/!svn/ver/109/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/ConfigurationInfoPacket.java
+END
+BMSDateTimePacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/bike/!svn/ver/108/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BMSDateTimePacket.java
+END
+BatteryGroupTemperaturePacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/bike/!svn/ver/111/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BatteryGroupTemperaturePacket.java
+END
+BatteryGroupInfoPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/bike/!svn/ver/107/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BatteryGroupInfoPacket.java
+END
+BMSCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/bike/!svn/ver/106/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BMSCommand.java
+END
+BatteryGroupCapacitySocPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/bike/!svn/ver/111/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BatteryGroupCapacitySocPacket.java
+END
+EditBluetoothDevicePacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/bike/!svn/ver/109/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/EditBluetoothDevicePacket.java
+END
+BatteryChargeCurrentPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/bike/!svn/ver/109/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BatteryChargeCurrentPacket.java
+END
+BMSPacketHeader.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/bike/!svn/ver/106/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BMSPacketHeader.java
+END
+DeviceSerialNumberPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/bike/!svn/ver/115/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/DeviceSerialNumberPacket.java
+END
+BatteryChargeDetailPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/bike/!svn/ver/111/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BatteryChargeDetailPacket.java
+END
+SoftwareVersionPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/bike/!svn/ver/106/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/SoftwareVersionPacket.java
+END
+HardwareVersionPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/bike/!svn/ver/106/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/HardwareVersionPacket.java
+END
+BatteryChipModelPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/bike/!svn/ver/108/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BatteryChipModelPacket.java
+END
+FlowNumber.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/bike/!svn/ver/97/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/FlowNumber.java
+END
+BatteryChargeTimePacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/bike/!svn/ver/108/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BatteryChargeTimePacket.java
+END
+BatteryChipDimensionPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/bike/!svn/ver/108/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BatteryChipDimensionPacket.java
+END
+BMSAlarmPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/bike/!svn/ver/109/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models/BMSAlarmPacket.java
+END

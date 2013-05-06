@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/bike/!svn/ver/95/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/model
+END
+netManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/bike/!svn/ver/21/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/model/netManager.java
+END
+HttpParseXmlUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/bike/!svn/ver/81/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/model/HttpParseXmlUtil.java
+END
+NameValuePairReflect.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/bike/!svn/ver/59/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/model/NameValuePairReflect.java
+END
+HttpRestfulClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/bike/!svn/ver/95/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/model/HttpRestfulClient.java
+END
+LocationClientModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/bike/!svn/ver/81/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/model/LocationClientModel.java
+END
+Plan.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/bike/!svn/ver/81/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/model/Plan.java
+END
+ServerAPI.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/bike/!svn/ver/95/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/model/ServerAPI.java
+END
+RouteMapModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/bike/!svn/ver/59/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/model/RouteMapModel.java
+END
+HttpParseJsonUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/bike/!svn/ver/66/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/model/HttpParseJsonUtil.java
+END
+MyLocationListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/bike/!svn/ver/59/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/model/MyLocationListener.java
+END
+weiboManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/bike/!svn/ver/81/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/model/weiboManager.java
+END
+Useraccount.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/bike/!svn/ver/65/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/model/Useraccount.java
+END

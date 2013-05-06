@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/bike/!svn/ver/67/bicycleapp/AEBicycle/libs/armeabi
+END
+liblocSDK_2.4.so
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/bike/!svn/ver/26/bicycleapp/AEBicycle/libs/armeabi/liblocSDK_2.4.so
+END
+libBMapApiEngine_v1_3_5.so
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/bike/!svn/ver/67/bicycleapp/AEBicycle/libs/armeabi/libBMapApiEngine_v1_3_5.so
+END
+libBMapApiEngine_v1_3_3.so
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/bike/!svn/ver/29/bicycleapp/AEBicycle/libs/armeabi/libBMapApiEngine_v1_3_3.so
+END
