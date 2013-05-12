@@ -21,29 +21,11 @@ svn:wc:ra_dav:version-url
 V 75
 /svn/bike/!svn/ver/47/bicycleapp/AEBicycle/res/drawable-mdpi/car_select.png
 END
-bike_select.png
-K 25
-svn:wc:ra_dav:version-url
-V 76
-/svn/bike/!svn/ver/47/bicycleapp/AEBicycle/res/drawable-mdpi/bike_select.png
-END
-bus_select.png
-K 25
-svn:wc:ra_dav:version-url
-V 75
-/svn/bike/!svn/ver/47/bicycleapp/AEBicycle/res/drawable-mdpi/bus_select.png
-END
 map_search.png
 K 25
 svn:wc:ra_dav:version-url
 V 75
 /svn/bike/!svn/ver/35/bicycleapp/AEBicycle/res/drawable-mdpi/map_search.png
-END
-gtk_refresh24.png
-K 25
-svn:wc:ra_dav:version-url
-V 78
-/svn/bike/!svn/ver/21/bicycleapp/AEBicycle/res/drawable-mdpi/gtk_refresh24.png
 END
 ic_action_search.png
 K 25
@@ -56,6 +38,36 @@ K 25
 svn:wc:ra_dav:version-url
 V 75
 /svn/bike/!svn/ver/47/bicycleapp/AEBicycle/res/drawable-mdpi/down_arrow.png
+END
+alert_dialog_icon.png
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/bike/!svn/ver/119/bicycleapp/AEBicycle/res/drawable-mdpi/alert_dialog_icon.png
+END
+car.png
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/bike/!svn/ver/47/bicycleapp/AEBicycle/res/drawable-mdpi/car.png
+END
+bike_select.png
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/bike/!svn/ver/47/bicycleapp/AEBicycle/res/drawable-mdpi/bike_select.png
+END
+bus_select.png
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/bike/!svn/ver/47/bicycleapp/AEBicycle/res/drawable-mdpi/bus_select.png
+END
+gtk_refresh24.png
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/bike/!svn/ver/21/bicycleapp/AEBicycle/res/drawable-mdpi/gtk_refresh24.png
 END
 bus.png
 K 25
@@ -80,10 +92,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 82
 /svn/bike/!svn/ver/47/bicycleapp/AEBicycle/res/drawable-mdpi/down_select_arrow.png
-END
-car.png
-K 25
-svn:wc:ra_dav:version-url
-V 68
-/svn/bike/!svn/ver/47/bicycleapp/AEBicycle/res/drawable-mdpi/car.png
 END

@@ -7,5 +7,17 @@ Tachometer.java
 K 25
 svn:wc:ra_dav:version-url
 V 100
-/svn/bike/!svn/ver/112/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/battery/widget/Tachometer.java
+/svn/bike/!svn/ver/120/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/battery/widget/Tachometer.java
+END
+Thermometer.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/bike/!svn/ver/120/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/battery/widget/Thermometer.java
+END
+BatteryContainer.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/bike/!svn/ver/120/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/battery/widget/BatteryContainer.java
 END

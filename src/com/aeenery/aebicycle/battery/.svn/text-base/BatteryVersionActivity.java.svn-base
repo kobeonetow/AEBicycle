@@ -3,22 +3,28 @@ package com.aeenery.aebicycle.battery;
 import com.aeenery.aebicycle.R;
 import com.aeenery.aebicycle.battery.BatteryDescriptionActivity.StateReceiver;
 import com.aeenery.aebicycle.bms.BMSUtil;
+import com.aeenery.aebicycle.bms.ConfigController;
 import com.aeenery.aebicycle.bms.RequestController;
 import com.aeenery.aebicycle.bms.SendPacketThread;
 import com.aeenery.aebicycle.bms.models.BMSCommand;
 import com.aeenery.aebicycle.entry.BicycleUtil;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class BatteryVersionActivity extends Activity{
@@ -27,15 +33,49 @@ public class BatteryVersionActivity extends Activity{
 	public final static String TAG = "BatteryDescriptionActivity";
 	private final int PERIOD = 5000;
 
+    private static final int DIALOG_TEXT_ENTRY = 7;
+    
 	private TextView tvHardware;
 	private TextView tvSoftware;
 	private TextView tvDeviceSerial;
 	private TextView tvBatteryInfo;
 	private Button btn_version;
+	private Button btnDevicename;
 	
 	private StateReceiver receiver = null;
 	private RequestController controller = null;
+	private ConfigController configController = null;
 	private SharedPreferences sharedPreferences = null;
+	
+	 @Override
+	 protected Dialog onCreateDialog(int id, Bundle b) {
+	        switch (id) {
+	               case DIALOG_TEXT_ENTRY:
+	            // This example shows how to add a custom layout to an AlertDialog
+	            LayoutInflater factory = LayoutInflater.from(this);
+	            final View textEntryView = factory.inflate(R.layout.alert_dialog_text_entry, null);
+	            final EditText etDevicename = (EditText)textEntryView.findViewById(R.id.etdevicename);
+	            return new AlertDialog.Builder(BatteryVersionActivity.this)
+	                .setIcon(R.drawable.alert_dialog_icon)
+	                .setTitle("设备名称")
+	                .setView(textEntryView)
+	                .setPositiveButton("确认", new DialogInterface.OnClickListener() {
+	                    public void onClick(DialogInterface dialog, int whichButton) {
+	                    	String name = etDevicename.getText().toString();
+	                    	if(D) Log.i(TAG,"Setting device name to "+name);
+	                    	configController.sendConfigNamePacket(new BMSCommand(
+	                    			BMSUtil.COMMAND_EDIT_BLUETOOTH_DEVICE_NAME,BMSUtil.COMMAND_EDIT_BLUETOOTH_DEVICE_NAME_REPLY), name);
+	                    }
+	                })
+	                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+	                    public void onClick(DialogInterface dialog, int whichButton) {
+	                    	
+	                    }
+	                })
+	                .create();
+	        }
+	        return null;
+	}
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -59,11 +99,23 @@ public class BatteryVersionActivity extends Activity{
 		tvDeviceSerial = (TextView)findViewById(R.id.tvdeviceserial);
 		tvBatteryInfo = (TextView)findViewById(R.id.tvbatterygroupinfo);
 		btn_version = (Button)findViewById(R.id.btn_version_update);
-	
+		btnDevicename = (Button)findViewById(R.id.btndevicename);
+		
 		controller = RequestController.getRequestController();
+		configController = ConfigController.getConfigController();
 		sharedPreferences = this.getSharedPreferences("aebt", MODE_PRIVATE);
 		
 		updateAll();
+		setAdapters();
+	}
+
+	private void setAdapters() {
+		btnDevicename.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				showDialog(DIALOG_TEXT_ENTRY);
+			}
+		});
 	}
 
 	public void updateAll(){

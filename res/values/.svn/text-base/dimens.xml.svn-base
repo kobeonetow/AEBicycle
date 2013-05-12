@@ -11,7 +11,9 @@
     <dimen name="right">129.5dp</dimen>
     <dimen name="bottom">116.5dp</dimen>
     
+    
     <dimen name="x37.5_dp">50dp</dimen>
     <dimen name="stroke_width">58dp</dimen>
+    <dimen name="stroke_width_thermo">1dp</dimen>
 
 </resources>

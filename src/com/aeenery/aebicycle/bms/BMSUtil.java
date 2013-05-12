@@ -4,6 +4,9 @@ import java.nio.ByteBuffer;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import android.content.Context;
+import android.content.res.Resources;
+import android.util.DisplayMetrics;
 import android.util.Log;
 
 import com.aeenery.aebicycle.bms.models.BMSCommand;
@@ -71,6 +74,10 @@ public class BMSUtil {
 	public final static int COMMAND_GET_BATTERY_CAPACITY_AND_SOC_STATUS_REPLY = 0x00A7;
 	public final static int COMMAND_GET_BATTERY_LOOP_PERIOD_INFO = 0x00A8;
 	public final static int COMMAND_GET_BATTERY_LOOP_PERIOD_INFO_REPLY = 0x00A9;
+	public final static int COMMAND_GET_BATTERY_TIME_LEFT = 0x00AA;
+	public final static int COMMAND_GET_BATTERY_TIME_LEFT_REPLY = 0x00AB;
+	
+	
 	public final static int COMMAND_BMS_ALARM = 0x0101;
 	
 	public static byte calculatePacketCheckCode(byte[] headerAndBody){
@@ -191,6 +198,22 @@ public class BMSUtil {
 		return count;
 	}
 
+	public static int indexOfBAIndex(byte[] data){
+		int index = 0;
+		for(int i=0; i<data.length; i++){
+			if(data[i] == (byte)0xBA){
+				if(i<(data.length-1)){
+					if(data[i+1] == (byte)0xBA){
+						index = i;
+						break;
+					}
+				}
+			}
+		}
+		Log.e("BMSUtil", "contain the BA indexAt:" + index);
+		return index;
+	}
+	
 	public static byte[] extractData(byte[] data){
 			int startIndex = -1;
 			int endIndex = -1;
@@ -219,10 +242,10 @@ public class BMSUtil {
 				return null;
 			}
 			int dataLength = endIndex - startIndex;
-			if(dataLength < 10){
-				Log.e("PacketBuilder","Received packet not a valid packet, packet too short less than 10 byte content");
-				return null;
-			}
+//			if(dataLength < 10){
+//				Log.e("PacketBuilder","Received packet not a valid packet, packet too short less than 10 byte content");
+//				return null;
+//			}
 			byte[] packet = new byte[dataLength];
 			System.arraycopy(data, startIndex, packet, 0, dataLength);
 			return packet;
@@ -247,5 +270,39 @@ public class BMSUtil {
 			return -1;
 		else
 			return 1;
+	}
+	
+	public static int convertByteToBCD(byte b){
+		byte one = (byte) ((b >> 4) & (byte)0x0F);
+		byte two = (byte)(b&(byte)0x0F);
+		return (int)one*10 + (int)two;
+	}
+	
+	/**
+	 * This method converts dp unit to equivalent pixels, depending on device density. 
+	 * 
+	 * @param dp A value in dp (density independent pixels) unit. Which we need to convert into pixels
+	 * @param context Context to get resources and device specific display metrics
+	 * @return A float value to represent px equivalent to dp depending on device density
+	 */
+	public static float convertDpToPixel(float dp, Context context){
+	    Resources resources = context.getResources();
+	    DisplayMetrics metrics = resources.getDisplayMetrics();
+	    float px = dp * (metrics.densityDpi / 160f);
+	    return px;
+	}
+
+	/**
+	 * This method converts device specific pixels to density independent pixels.
+	 * 
+	 * @param px A value in px (pixels) unit. Which we need to convert into db
+	 * @param context Context to get resources and device specific display metrics
+	 * @return A float value to represent dp equivalent to px value
+	 */
+	public static float convertPixelsToDp(float px, Context context){
+	    Resources resources = context.getResources();
+	    DisplayMetrics metrics = resources.getDisplayMetrics();
+	    float dp = px / (metrics.densityDpi / 160f);
+	    return dp;
 	}
 }

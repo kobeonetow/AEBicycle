@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 77
-/svn/bike/!svn/ver/116/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/battery
+/svn/bike/!svn/ver/118/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/battery
 END
 BluetoothChatService.java
 K 25
@@ -25,13 +25,13 @@ BatteryVersionActivity.java
 K 25
 svn:wc:ra_dav:version-url
 V 105
-/svn/bike/!svn/ver/115/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/battery/BatteryVersionActivity.java
+/svn/bike/!svn/ver/119/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/battery/BatteryVersionActivity.java
 END
 BluetoothService.java
 K 25
 svn:wc:ra_dav:version-url
 V 99
-/svn/bike/!svn/ver/117/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/battery/BluetoothService.java
+/svn/bike/!svn/ver/119/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/battery/BluetoothService.java
 END
 BluetoothChat.java
 K 25
@@ -43,7 +43,7 @@ BatteryMainActivity.java
 K 25
 svn:wc:ra_dav:version-url
 V 102
-/svn/bike/!svn/ver/117/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/battery/BatteryMainActivity.java
+/svn/bike/!svn/ver/120/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/battery/BatteryMainActivity.java
 END
 DeviceListActivity.java
 K 25

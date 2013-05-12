@@ -24,8 +24,6 @@ public class Tachometer extends View {
     private float pxDp = getResources().getDimension(R.dimen.one_dp);
 
     private static final float MB = 214f/100f;
-//    private static final float FIRST_RATE = MB / 105;
-//    private static final float SECOND_RATE = MB * 9 / 105;
     private static final float MIN_SPEED = 0f;
     private static final float MAX_SPEED = 100f;
 

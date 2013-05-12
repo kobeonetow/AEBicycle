@@ -1,7 +1,7 @@
 10
 
 dir
-116
+118
 https://ec2-54-251-17-187.ap-southeast-1.compute.amazonaws.com/svn/bike/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/battery/widget
 https://ec2-54-251-17-187.ap-southeast-1.compute.amazonaws.com/svn/bike
 
@@ -26,16 +26,16 @@ svn:special svn:externals svn:needs-lock
 
 9fed3156-90df-4bd0-9860-40497e767155
 
-Tachometer.java
+BatteryContainer.java
 file
+120
 
 
 
-
-2013-04-21T18:33:57.665000Z
-0119420afc5750d86d419a25cea81243
-2013-04-21T18:32:47.955940Z
-112
+2013-05-12T10:12:55.079000Z
+3df27a9f4f76a67d90b7c40fe28e1092
+2013-05-12T10:10:38.416515Z
+120
 jianxing
 has-props
 
@@ -58,5 +58,73 @@ has-props
 
 
 
-6274
+2377
+
+Tachometer.java
+file
+120
+
+
+
+2013-05-11T17:01:45.285000Z
+1c1760f5c9310c5c7f63bf2499cb4a56
+2013-05-12T10:10:38.416515Z
+120
+jianxing
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6155
+
+Thermometer.java
+file
+120
+
+
+
+2013-05-12T09:39:13.391000Z
+644af4c1af75681e60e0e0715b8217cc
+2013-05-12T10:10:38.416515Z
+120
+jianxing
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3135
 

@@ -5,6 +5,7 @@ import java.lang.reflect.Array;
 import com.aeenery.aebicycle.bms.BMSController;
 import com.aeenery.aebicycle.bms.BMSUtil;
 import com.aeenery.aebicycle.bms.TimeOutThread;
+import com.aeenery.aebicycle.bms.models.BMSGeneralReplyPacket;
 import com.aeenery.aebicycle.bms.models.BMSPacket;
 import com.aeenery.aebicycle.entry.BicycleUtil;
 
@@ -241,12 +242,24 @@ public class BluetoothService extends Service {
 			if(packet == null){
 				if(D) Log.e(TAG,"Invalid packet, ignore and return back to service");
 			}else{
-				BMSPacket bmsPacket = new BMSPacket(packet);
-				if(controller.isCorrectResponce(bmsPacket)){
-					timeoutThread.cancel();
-					controller.handlerReceivePacket(bmsPacket);
+				BMSGeneralReplyPacket generalPacket = new BMSGeneralReplyPacket(packet);
+				if(D) Log.e(TAG,"Universal packet received :"+(int)BMSUtil.COMMAND_UNIVERSAL + " matching "+ generalPacket.command.getCommandAsByteInt());
+				if((int)BMSUtil.COMMAND_UNIVERSAL == generalPacket.command.getCommandAsByteInt()){
+					if(D) Log.e(TAG,"Universal packet received");
+					if(controller.isCorrectResponce(generalPacket)){
+						timeoutThread.cancel();
+						controller.handlerReceivePacket(generalPacket);
+					}else{
+						if(D) Log.e(TAG,"Invalid general reply packet, is not a correct response");
+					}
 				}else{
-					if(D) Log.e(TAG,"Invalid packet, is not a correct response");
+					BMSPacket bmsPacket = new BMSPacket(packet);
+					if(controller.isCorrectResponce(bmsPacket)){
+						timeoutThread.cancel();
+						controller.handlerReceivePacket(bmsPacket);
+					}else{
+						if(D) Log.e(TAG,"Invalid packet, is not a correct response");
+					}
 				}
 			}
 			resetReceiveBuffer();

@@ -2,12 +2,14 @@ package com.aeenery.aebicycle.bms;
 
 import com.aeenery.aebicycle.HomeActivity;
 import com.aeenery.aebicycle.battery.BluetoothService;
+import com.aeenery.aebicycle.bms.models.BMSGeneralReplyPacket;
 import com.aeenery.aebicycle.bms.models.BMSPacket;
 import com.aeenery.aebicycle.bms.models.BatteryGroupCapacitySocPacket;
 import com.aeenery.aebicycle.bms.models.BatteryGroupInfoPacket;
 import com.aeenery.aebicycle.bms.models.BatteryGroupTemperaturePacket;
 import com.aeenery.aebicycle.bms.models.BatteryPeriodicPacket;
 import com.aeenery.aebicycle.bms.models.BatteryTemperaturePacket;
+import com.aeenery.aebicycle.bms.models.BatteryTimeLeftPacket;
 import com.aeenery.aebicycle.bms.models.BatteryVoltageCurrentPacket;
 import com.aeenery.aebicycle.bms.models.ConfigurationInfoPacket;
 import com.aeenery.aebicycle.bms.models.DeviceSerialNumberPacket;
@@ -131,7 +133,7 @@ public class BMSController implements AvailabilityNotificationCheck{
 			if(D) Log.i(TAG,"Packet sending is null");
 			return false;
 		}
-		if(packetSending.getHeader().getCommandId().getResponseID() == 0xFFFA){
+		if(packetSending.getHeader().getCommandId().getResponseID() == 0xFAAA){
 			if(D) Log.i(TAG,"the response id is default");
 			return false;
 		}
@@ -151,6 +153,29 @@ public class BMSController implements AvailabilityNotificationCheck{
 		if(D) Log.e(TAG,"ALREADY set packet sending to null and waiting for reply to false");
 		notifyAll();
 		updateSharePreferencesRecord(packet);
+	}
+	
+
+	public synchronized boolean isCorrectResponce(BMSGeneralReplyPacket generalPacket) {
+		if(packetSending == null){
+			if(D) Log.i(TAG,"Packet sending is null");
+			return false;
+		}
+		if(packetSending.getHeader().getCommandId().getResponseID() == generalPacket.command.getCommandAsByteInt()){
+			if(D) Log.i(TAG,"the response id matched " + packetSending.getHeader().getCommandId().getResponseID() + " , "+generalPacket.command.getCommandAsByteInt());
+			return true;
+		}
+		if(D) Log.i(TAG,"the response id not matched " + packetSending.getHeader().getCommandId().getResponseID() + " , "+generalPacket.command.getCommandAsByteInt());
+		return false;
+	}
+	public synchronized void handlerReceivePacket(BMSGeneralReplyPacket generalPacket) {
+		setPacketSending(null);
+		waitingForReply = false;
+		resetTimeoutFrequency();
+		if(D) Log.e(TAG,"ALREADY set packet sending to null and waiting for reply to false");
+		notifyAll();
+//		if(D) Log.e(TAG,"General reply successfully receive and handle detail:"+ generalPacket.getReplyStatus()+"-"+generalPacket.getReplyReason());
+		Toast.makeText(context, generalPacket.getReplyStatus()+"-"+generalPacket.getReplyReason(), Toast.LENGTH_SHORT).show();
 	}
 	
 	private void resetTimeoutFrequency(){
@@ -223,6 +248,11 @@ public class BMSController implements AvailabilityNotificationCheck{
 			BatteryTemperaturePacket btp = (BatteryTemperaturePacket)builder.buildReceivedPacket(packet);
 			edit.putString("0080-1", btp.getHighest() +"");
 			edit.putString("0080-2", btp.getLowest()+"");
+			break;
+		case BMSUtil.COMMAND_GET_BATTERY_TIME_LEFT_REPLY:
+			BatteryTimeLeftPacket btlp = (BatteryTimeLeftPacket)builder.buildReceivedPacket(packet);
+			edit.putString("00AA-1", btlp.getHour()+"");
+			edit.putString("00AA-2", btlp.getMinute()+"");
 			break;
 		}
 		edit.commit();
@@ -307,5 +337,6 @@ public class BMSController implements AvailabilityNotificationCheck{
 		}
 			
 	}
+
 
 }

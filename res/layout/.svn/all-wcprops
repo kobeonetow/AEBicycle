@@ -1,25 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 54
-/svn/bike/!svn/ver/116/bicycleapp/AEBicycle/res/layout
+/svn/bike/!svn/ver/118/bicycleapp/AEBicycle/res/layout
 END
 popwindow_more_city.xml
 K 25
 svn:wc:ra_dav:version-url
 V 77
 /svn/bike/!svn/ver/22/bicycleapp/AEBicycle/res/layout/popwindow_more_city.xml
-END
-activity_plan_detail.xml
-K 25
-svn:wc:ra_dav:version-url
-V 78
-/svn/bike/!svn/ver/79/bicycleapp/AEBicycle/res/layout/activity_plan_detail.xml
-END
-activity_login.xml
-K 25
-svn:wc:ra_dav:version-url
-V 72
-/svn/bike/!svn/ver/78/bicycleapp/AEBicycle/res/layout/activity_login.xml
 END
 activity_battery_description.xml
 K 25
@@ -31,7 +19,7 @@ activity_battery_main.xml
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/svn/bike/!svn/ver/113/bicycleapp/AEBicycle/res/layout/activity_battery_main.xml
+/svn/bike/!svn/ver/120/bicycleapp/AEBicycle/res/layout/activity_battery_main.xml
 END
 activity_challengeplan.xml
 K 25
@@ -45,29 +33,17 @@ svn:wc:ra_dav:version-url
 V 74
 /svn/bike/!svn/ver/84/bicycleapp/AEBicycle/res/layout/activity_battery.xml
 END
-activity_normalplan.xml
-K 25
-svn:wc:ra_dav:version-url
-V 77
-/svn/bike/!svn/ver/26/bicycleapp/AEBicycle/res/layout/activity_normalplan.xml
-END
 popwindow_route_info.xml
 K 25
 svn:wc:ra_dav:version-url
 V 78
 /svn/bike/!svn/ver/38/bicycleapp/AEBicycle/res/layout/popwindow_route_info.xml
 END
-activity_weather.xml
-K 25
-svn:wc:ra_dav:version-url
-V 74
-/svn/bike/!svn/ver/66/bicycleapp/AEBicycle/res/layout/activity_weather.xml
-END
 activity_quickplan.xml
 K 25
 svn:wc:ra_dav:version-url
-V 76
-/svn/bike/!svn/ver/76/bicycleapp/AEBicycle/res/layout/activity_quickplan.xml
+V 77
+/svn/bike/!svn/ver/119/bicycleapp/AEBicycle/res/layout/activity_quickplan.xml
 END
 activity_route_selection.xml
 K 25
@@ -93,6 +69,72 @@ svn:wc:ra_dav:version-url
 V 82
 /svn/bike/!svn/ver/82/bicycleapp/AEBicycle/res/layout/activity_virtual_battery.xml
 END
+popwindow_route_select.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/bike/!svn/ver/47/bicycleapp/AEBicycle/res/layout/popwindow_route_select.xml
+END
+activity_weibo_edit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/bike/!svn/ver/80/bicycleapp/AEBicycle/res/layout/activity_weibo_edit.xml
+END
+activity_challenge.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/bike/!svn/ver/26/bicycleapp/AEBicycle/res/layout/activity_challenge.xml
+END
+activity_battery_detail.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/bike/!svn/ver/110/bicycleapp/AEBicycle/res/layout/activity_battery_detail.xml
+END
+listview_plan_adapter.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/bike/!svn/ver/65/bicycleapp/AEBicycle/res/layout/listview_plan_adapter.xml
+END
+activity_route_map.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/bike/!svn/ver/36/bicycleapp/AEBicycle/res/layout/activity_route_map.xml
+END
+activity_battery_version.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/bike/!svn/ver/118/bicycleapp/AEBicycle/res/layout/activity_battery_version.xml
+END
+activity_plan_detail.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/bike/!svn/ver/79/bicycleapp/AEBicycle/res/layout/activity_plan_detail.xml
+END
+activity_login.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/bike/!svn/ver/78/bicycleapp/AEBicycle/res/layout/activity_login.xml
+END
+activity_normalplan.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/bike/!svn/ver/26/bicycleapp/AEBicycle/res/layout/activity_normalplan.xml
+END
+activity_weather.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/bike/!svn/ver/66/bicycleapp/AEBicycle/res/layout/activity_weather.xml
+END
 routeinfo_list_item.xml
 K 25
 svn:wc:ra_dav:version-url
@@ -117,24 +159,6 @@ svn:wc:ra_dav:version-url
 V 71
 /svn/bike/!svn/ver/81/bicycleapp/AEBicycle/res/layout/activity_home.xml
 END
-popwindow_route_select.xml
-K 25
-svn:wc:ra_dav:version-url
-V 80
-/svn/bike/!svn/ver/47/bicycleapp/AEBicycle/res/layout/popwindow_route_select.xml
-END
-activity_weibo_edit.xml
-K 25
-svn:wc:ra_dav:version-url
-V 77
-/svn/bike/!svn/ver/80/bicycleapp/AEBicycle/res/layout/activity_weibo_edit.xml
-END
-activity_challenge.xml
-K 25
-svn:wc:ra_dav:version-url
-V 76
-/svn/bike/!svn/ver/26/bicycleapp/AEBicycle/res/layout/activity_challenge.xml
-END
 activity_register.xml
 K 25
 svn:wc:ra_dav:version-url
@@ -147,39 +171,21 @@ svn:wc:ra_dav:version-url
 V 76
 /svn/bike/!svn/ver/64/bicycleapp/AEBicycle/res/layout/activity_view_plan.xml
 END
-activity_battery_detail.xml
-K 25
-svn:wc:ra_dav:version-url
-V 82
-/svn/bike/!svn/ver/110/bicycleapp/AEBicycle/res/layout/activity_battery_detail.xml
-END
 device_name.xml
 K 25
 svn:wc:ra_dav:version-url
 V 69
 /svn/bike/!svn/ver/81/bicycleapp/AEBicycle/res/layout/device_name.xml
 END
-listview_plan_adapter.xml
+alert_dialog_text_entry.xml
 K 25
 svn:wc:ra_dav:version-url
-V 79
-/svn/bike/!svn/ver/65/bicycleapp/AEBicycle/res/layout/listview_plan_adapter.xml
+V 82
+/svn/bike/!svn/ver/119/bicycleapp/AEBicycle/res/layout/alert_dialog_text_entry.xml
 END
 activity_developing.xml
 K 25
 svn:wc:ra_dav:version-url
 V 77
 /svn/bike/!svn/ver/80/bicycleapp/AEBicycle/res/layout/activity_developing.xml
-END
-activity_route_map.xml
-K 25
-svn:wc:ra_dav:version-url
-V 76
-/svn/bike/!svn/ver/36/bicycleapp/AEBicycle/res/layout/activity_route_map.xml
-END
-activity_battery_version.xml
-K 25
-svn:wc:ra_dav:version-url
-V 83
-/svn/bike/!svn/ver/116/bicycleapp/AEBicycle/res/layout/activity_battery_version.xml
 END

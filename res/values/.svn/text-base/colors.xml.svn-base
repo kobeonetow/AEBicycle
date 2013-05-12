@@ -175,6 +175,7 @@
     <color name="green_25">#c08dc63f</color>
     <color name="green_50">#808dc63f</color>
     <color name="green_75">#408dc63f</color>
+    <color name="batterygreen">#60DB67</color>
     
     <color name="transpert">#00000000</color>
 </resources>

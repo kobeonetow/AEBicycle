@@ -71,5 +71,11 @@
 	    style="@style/detailText"
 	    />
 	
+	<Button 
+	    android:id="@+id/btndevicename"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="修改设备名称"
+	    />
 </LinearLayout>	
 </ScrollView>

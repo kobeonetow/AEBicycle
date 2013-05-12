@@ -11,6 +11,7 @@ import com.aeenery.aebicycle.bms.models.BatteryGroupInfoPacket;
 import com.aeenery.aebicycle.bms.models.BatteryGroupTemperaturePacket;
 import com.aeenery.aebicycle.bms.models.BatteryPeriodicPacket;
 import com.aeenery.aebicycle.bms.models.BatteryTemperaturePacket;
+import com.aeenery.aebicycle.bms.models.BatteryTimeLeftPacket;
 import com.aeenery.aebicycle.bms.models.BatteryVoltageCurrentPacket;
 import com.aeenery.aebicycle.bms.models.ConfigurationInfoPacket;
 import com.aeenery.aebicycle.bms.models.DeviceSerialNumberPacket;
@@ -56,6 +57,10 @@ public class PacketBuilder {
 		return packet;
 	}
 	
+	public BMSPacket buildConfigPacket(BMSCommand commandId){
+		return buildRequestPacket(commandId);
+	}
+	
 	public BMSPacket buildReceivedPacket(BMSPacket packet){
 		return buildReplyPacket(packet);
 	}
@@ -83,6 +88,8 @@ public class PacketBuilder {
 			return new BatteryPeriodicPacket(packet);
 		case BMSUtil.COMMAND_GET_BATTERY_TEMPERATURE_REPLY:
 			return new BatteryTemperaturePacket(packet);
+		case BMSUtil.COMMAND_GET_BATTERY_TIME_LEFT_REPLY:
+			return new BatteryTimeLeftPacket(packet);
 		default:
 			return null;
 		}

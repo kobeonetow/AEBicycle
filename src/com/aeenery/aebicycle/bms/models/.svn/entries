@@ -1,7 +1,7 @@
 10
 
 dir
-116
+118
 https://ec2-54-251-17-187.ap-southeast-1.compute.amazonaws.com/svn/bike/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/bms/models
 https://ec2-54-251-17-187.ap-southeast-1.compute.amazonaws.com/svn/bike
 
@@ -62,14 +62,14 @@ has-props
 
 BMSCommand.java
 file
+119
 
 
 
-
-2013-04-21T17:06:09.782000Z
-308ac455e52409ffac65d066ea29e714
-2013-04-14T09:05:57.392523Z
-106
+2013-05-08T16:53:04.251000Z
+ae8f5b3d41207d7b5f320a2c7cafddc3
+2013-05-08T17:15:05.816714Z
+119
 jianxing
 has-props
 
@@ -92,7 +92,7 @@ has-props
 
 
 
-1098
+1262
 
 BMSDateTimePacket.java
 file
@@ -128,16 +128,16 @@ has-props
 
 1711
 
-BMSPacket.java
+BMSGeneralReplyPacket.java
 file
+119
 
 
 
-
-2013-04-14T07:38:43.470000Z
-33cb09423ca8c0d8a030ebcaff396865
-2013-04-14T09:05:57.392523Z
-106
+2013-05-08T17:17:17.372000Z
+35ae84704d68c654db7e74e47827d12a
+2013-05-08T17:15:05.816714Z
+119
 jianxing
 has-props
 
@@ -160,7 +160,41 @@ has-props
 
 
 
-2347
+1646
+
+BMSPacket.java
+file
+119
+
+
+
+2013-05-08T15:18:41.986000Z
+8a1bcaf22537524cafefcd9b2fafcaf2
+2013-05-08T17:15:05.816714Z
+119
+jianxing
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2383
 
 BMSPacketHeader.java
 file
@@ -672,6 +706,40 @@ has-props
 
 789
 
+BatteryTimeLeftPacket.java
+file
+120
+
+
+
+2013-05-12T08:57:21.289000Z
+38aaf40984cea8f1537b8279248f59ee
+2013-05-12T10:10:38.416515Z
+120
+jianxing
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+737
+
 BatteryVoltageCurrentPacket.java
 file
 
@@ -705,6 +773,40 @@ has-props
 
 
 614
+
+ChangeDeviceNamePacket.java
+file
+119
+
+
+
+2013-05-08T16:21:22.893000Z
+ad982402d4d768e4641a7a47bd3b8542
+2013-05-08T17:15:05.816714Z
+119
+jianxing
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1059
 
 ConfigurationInfoPacket.java
 file

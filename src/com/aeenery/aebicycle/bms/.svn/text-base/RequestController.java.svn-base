@@ -29,7 +29,6 @@ public class RequestController{
 	}
 	
 	public void sendRequestPacket(BMSCommand command, boolean special){
-		
 		BMSPacket packet = null;
 		if(!special)
 			packet = controller.getBuilder().buildRequestPacket(command);
@@ -50,17 +49,17 @@ public class RequestController{
 		}
 	}
 
-	private Handler mHandler = new Handler(){
-		@Override
-		public void handleMessage(Message msg) {
-			switch (msg.what) {
-			case BMSUtil.COMMAND_GET_DEVICE_SERIAL_NUMBER:
-				//if request approved
-				//or not, do something
-				break;
-			}
-		}
-	};
+//	private Handler mHandler = new Handler(){
+//		@Override
+//		public void handleMessage(Message msg) {
+//			switch (msg.what) {
+//			case BMSUtil.COMMAND_GET_DEVICE_SERIAL_NUMBER:
+//				//if request approved
+//				//or not, do something
+//				break;
+//			}
+//		}
+//	};
 
 	public void sendEmptyByte() {
 		controller.sendEmptyByte();

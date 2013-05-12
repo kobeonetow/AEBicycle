@@ -4,7 +4,9 @@ package com.aeenery.aebicycle.battery;
 import com.aeenery.aebicycle.R;
 import com.aeenery.aebicycle.R.layout;
 import com.aeenery.aebicycle.R.menu;
+import com.aeenery.aebicycle.battery.widget.BatteryContainer;
 import com.aeenery.aebicycle.battery.widget.Tachometer;
+import com.aeenery.aebicycle.battery.widget.Thermometer;
 import com.aeenery.aebicycle.bms.BMSUtil;
 import com.aeenery.aebicycle.bms.RequestController;
 import com.aeenery.aebicycle.bms.SenderContext;
@@ -26,6 +28,8 @@ import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,8 +39,10 @@ public class BatteryMainActivity extends Activity implements SenderContext{
 	private static String TAG = "BatteryMainActivity";
 	private static boolean D = true;
 	
-	private Button btn_temp; 
+//	private Button btn_temp; 
+	private Thermometer thermo;
 	private Tachometer tach;
+	private BatteryContainer battery;
 	private TextView power;
 	private TextView tvCurrentNow;
 	private TextView tvVoltageNow;
@@ -53,15 +59,20 @@ public class BatteryMainActivity extends Activity implements SenderContext{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_battery_main);
-		
 		setup();
 	}
 
 	private void setup() {
 		controller = RequestController.getRequestController();
 		sharedPreferences = this.getSharedPreferences("aebt", MODE_PRIVATE);
-		btn_temp = (Button)findViewById(R.id.buttonTemp);
+//		btn_temp = (Button)findViewById(R.id.buttonTemp);
+		thermo = (Thermometer)findViewById(R.id.thermometer);
+//		thermo.setLayoutParams(new ViewGroup.LayoutParams((int)BMSUtil.convertPixelsToDp(100, this), (int)BMSUtil.convertPixelsToDp(700, this)));
+		
+		battery = (BatteryContainer)findViewById(R.id.batterycontainer);
+		
 		tach = (Tachometer)findViewById(R.id.tachometer);
 		power = (TextView)findViewById(R.id.bpowernow);
 		tvCurrentNow = (TextView)findViewById(R.id.currentnow);
@@ -94,6 +105,9 @@ public class BatteryMainActivity extends Activity implements SenderContext{
 				wait();
 				controller.sendRequestPacket(new BMSCommand(BMSUtil.COMMAND_GET_BATTERY_TEMPERATURE_NOW_DETAIL,
 						BMSUtil.COMMAND_GET_BATTERY_TEMPERATURE_NOW_DETAIL_REPLY),true);
+				wait();
+				controller.sendRequestPacket(new BMSCommand(BMSUtil.COMMAND_GET_BATTERY_TIME_LEFT,
+						BMSUtil.COMMAND_GET_BATTERY_TIME_LEFT_REPLY), false);
 				wait();
 			}catch (Exception e) {
 				Log.e("TAG","Error:"+e.getMessage()+ " "+e.getStackTrace()[1]);
@@ -216,9 +230,11 @@ public class BatteryMainActivity extends Activity implements SenderContext{
 					power_now = power_now / power_max * 100;
 					power.setText("电量:"+(int)power_now + "%");
 					tach.update((float)power_now);
+					battery.update((float)power_now);
 				}else{
 					power.setText("电量:N.A.");
 					tach.update(0);
+					battery.update((float)100);
 				}
 				
 				String voltage =  sharedPreferences.getString("00A0-1", "0");
@@ -228,7 +244,8 @@ public class BatteryMainActivity extends Activity implements SenderContext{
 				
 				temp =  sharedPreferences.getString("00A2-5", "");
 				if(temp.equals("")){
-					btn_temp.setText("N/A");
+//					btn_temp.setText("N/A");
+					thermo.update(0.0f);
 				}else{
 					String[] temps = temp.split(",");
 					int count = 0;
@@ -240,9 +257,13 @@ public class BatteryMainActivity extends Activity implements SenderContext{
 						}
 					}
 					total = total/(double)count;
-					btn_temp.setText(total + "C");
+//					btn_temp.setText(total + "C");
+					thermo.update((float)total);
 				}
 				
+				
+				String timeleft =  sharedPreferences.getString("00AA-1", "0") + "小时" +  sharedPreferences.getString("00AA-2", "0")+ "分";;
+				tvCurrentNow.append("\n"+timeleft);
 			}
 		}
     	

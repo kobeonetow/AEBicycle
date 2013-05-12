@@ -1,14 +1,14 @@
 10
 
 dir
-116
+118
 https://ec2-54-251-17-187.ap-southeast-1.compute.amazonaws.com/svn/bike/bicycleapp/AEBicycle/src/com/aeenery/aebicycle/battery
 https://ec2-54-251-17-187.ap-southeast-1.compute.amazonaws.com/svn/bike
 
 
 
-2013-04-26T19:43:50.712545Z
-116
+2013-05-08T14:16:32.660544Z
+118
 jianxing
 
 
@@ -28,7 +28,7 @@ svn:special svn:externals svn:needs-lock
 
 BatteryDescriptionActivity.java
 file
-117
+
 
 
 
@@ -62,7 +62,7 @@ has-props
 
 BatteryDetailActivity.java
 file
-117
+
 
 
 
@@ -96,14 +96,14 @@ has-props
 
 BatteryMainActivity.java
 file
-117
+120
 
 
 
-2013-05-06T15:15:23.287000Z
-c1e88506551ad2f341da71f9a5f32151
-2013-05-06T15:20:45.036603Z
-117
+2013-05-12T09:56:49.623000Z
+2e4217b97a3d834b3730664844b35f1b
+2013-05-12T10:10:38.416515Z
+120
 jianxing
 has-props
 
@@ -126,18 +126,18 @@ has-props
 
 
 
-7990
+9051
 
 BatteryVersionActivity.java
 file
+119
 
 
 
-
-2013-04-26T19:20:47.926000Z
-75019c2baf7f99bda4bf00714659d0e2
-2013-04-26T19:22:44.783575Z
-115
+2013-05-08T15:36:19.532000Z
+69fa5dd2c37d20fc4bba143f944f6652
+2013-05-08T17:15:05.816714Z
+119
 jianxing
 has-props
 
@@ -160,7 +160,7 @@ has-props
 
 
 
-5278
+7553
 
 BluetoothChat.java
 file
@@ -232,14 +232,14 @@ has-props
 
 BluetoothService.java
 file
-117
+119
 
 
 
-2013-05-06T14:31:04.701000Z
-a161129ee0503e7021e55e431da0ed57
-2013-05-06T15:20:45.036603Z
-117
+2013-05-08T16:48:50.966000Z
+935ef21cc17f544d377ffaa6988a7f9f
+2013-05-08T17:15:05.816714Z
+119
 jianxing
 has-props
 
@@ -262,7 +262,31 @@ has-props
 
 
 
-14517
+15214
+
+CustomAlertDialogs.java
+file
+119
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+deleted
 
 DeviceListActivity.java
 file

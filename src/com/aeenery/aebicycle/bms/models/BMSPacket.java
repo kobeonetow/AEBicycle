@@ -30,6 +30,7 @@ public class BMSPacket {
 		header = packet.getHeader();
 		body = packet.getBody();
 		checkCode = packet.getCheckCode();
+		packetId = packet.getPacketId();
 	}
 	
 	public BMSPacket(){

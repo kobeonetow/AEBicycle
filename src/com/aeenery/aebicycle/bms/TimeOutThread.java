@@ -16,7 +16,7 @@ public class TimeOutThread extends Thread{
 	private final static String TAG = "TimeOutThread";
 	private final static boolean D = true;
 	private Context context;
-	private int waitTime= 10000;
+	private int waitTime= 1000;
 	public boolean broadcast = true;
 	private String packetId;
 	
